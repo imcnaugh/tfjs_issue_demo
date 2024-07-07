@@ -6,8 +6,6 @@ But keras 3.x offers backwards compatibility with 2.x, if you set the environmen
 
 Setting that env var when running the python script will produce a model.json file that works with tensorflowjs
 
-```bash
-
 ## Original README
 
 This is a quick demo of an issue I have run into with tensorflow js, and converting/loading a model trained in python, into a tensorflow js project.
