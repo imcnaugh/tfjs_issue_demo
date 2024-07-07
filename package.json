@@ -1,0 +1,16 @@
+{
+  "name": "tfjstest",
+  "version": "1.0.0",
+  "main": "load_and_run_model.js",
+  "type": "module",
+  "scripts": {
+    "start": "node load_and_run_model.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.20.0",
+    "express": "^4.19.2"
+  }
+}
