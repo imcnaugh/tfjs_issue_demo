@@ -1,0 +1,9 @@
+keras==3.4.1
+tensorboard==2.16.2
+tensorboard-plugin-wit==1.6.0
+tensorflow==2.16.1
+tensorflow-hub==0.16.1
+tensorflow-io-gcs-filesystem==0.37.1
+tensorflow_decision_forests==1.9.1
+tensorflowjs==4.6.0
+tensorstore==0.1.63
