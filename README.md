@@ -54,3 +54,45 @@ now i have done some investigation and documented it [here](https://discuss.tens
 but what it seems to come down to is the model.json file needs to have the `batch_shape` property renamed to `batch_input_shape`
 
 and the `inbound_nodes` array needs to be simplified
+
+for instance what is produced from the python script is:
+
+```json
+"inbound_nodes": [
+  {
+    "args": [
+      {
+        "class_name": "__keras_tensor__",
+        "config": {
+          "shape": [
+            null,
+            1
+          ],
+          "dtype": "float32",
+          "keras_history": [
+            "input_layer",
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "kwargs": {}
+  }
+]
+```
+
+but when I modify it to look similar to the following: thing work
+```json
+"inbound_nodes": [
+  [
+    [
+      "input_layer",
+      0,
+      0
+    ]
+  ]
+]
+```
+
+I have included the modified model.json file in the `tfjs-model` directory as `working-model.json`, so you can see the difference.
