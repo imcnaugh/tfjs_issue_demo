@@ -1,3 +1,15 @@
+# This has been resolved, ill leave it up as a reference for others
+
+The issue was tensorflow 2.16.x uses keras 3.x by default, and the converter needs keras 2.x, 
+
+But keras 3.x offers backwards compatibility with 2.x, if you set the environment variable `TF_USE_LEGACY_KERAS=1`
+
+Setting that env var when running the python script will produce a model.json file that works with tensorflowjs
+
+```bash
+
+## Original README
+
 This is a quick demo of an issue I have run into with tensorflow js, and converting/loading a model trained in python, into a tensorflow js project.
 
 There are 2 important files in this project:
